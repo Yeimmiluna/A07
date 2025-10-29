@@ -1,0 +1,139 @@
+/* reset & box-sizing (step 3) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  (step 5) */
+h1, h2, h3, p, ul {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+/* default left margin for unordered lists (step 6) */
+ul {
+  margin-left: 2em;
+}
+
+/* custom property */
+:root {
+  --accent-color: #800000;
+}
+
+/* page layout and default styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  width: 80%;
+  margin: 0 auto; /* center the page */
+  border: 2px solid var(--accent-color); /* step 5/8 */
+  background: #fff;
+  color: #000;
+}
+
+/* links */
+a:hover,
+a:focus {
+  font-style: italic;
+  color: var(--accent-color);
+}
+
+/* headings */
+h1 {
+  font-size: 150%;
+}
+
+/* header level headings  */
+header h2 {
+  font-size: 175%;
+  /* remove text-indent per step 12 */
+  text-indent: 0;
+  /* keep accent color for h2 if you want */
+  color: var(--accent-color);
+  padding-bottom: 0; 
+}
+
+header h3 {
+  font-size: 130%;
+  font-style: italic;
+  text-indent: 0;
+  padding-bottom: 1em; 
+}
+
+/* smaller section headings */
+h2 {
+  font-size: 130%;
+  color: var(--accent-color);
+}
+h3 {
+  font-size: 105%;
+}
+
+/* header styling (step 9,16) */
+header {
+  border-bottom: 2px solid var(--accent-color);
+background: linear-gradient(30deg, #f6bb73 0%, #ffffff 30%, #ffffff 65%, #f6bb73 100%);
+  padding: 0.5em 1em; /* small internal spacing */
+}
+
+/* header image: use margins instead of only float to match spec (step 12) */
+header img {
+  float: left;
+  margin: .75em 1em;
+  display: block;
+}
+
+/* main content (step 13) */
+main {
+  clear: left;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+/* main h1 borders top & bottom (step 10) */
+main h1 {
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+/* speaker or content images inside main (step 17) */
+main img {
+  border: 4px double var(--accent-color);
+  border-radius: 8px;
+  padding: 2px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5em 0;
+}
+
+/* blockquote styling (step 15) */
+blockquote {
+  font-style: italic;
+  padding: .5em 1em;
+  margin: 1em 0;
+  border-left: 4px solid rgba(0,0,0,0.05);
+}
+
+/* footer styling (step 11 & 14) */
+footer {
+  background: var(--accent-color);
+  margin-top: 1em;
+}
+footer p {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #ffffff;
+}
+
+/* utility classes */
+.large {
+  font-size: 125%;
+}
